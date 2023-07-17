@@ -1,6 +1,6 @@
 import { BrowserRouter as Router } from "react-router-dom";
 import { Navbar } from "./components";
-import AnimatedRoutes from "./components/Routes/AnimatedRoutes";
+import AnimatedRoutes from "./components/Routes/AnimatedRoutes.jsx";
 import Footer from "./components/Footer";
 
 const App = () => {
