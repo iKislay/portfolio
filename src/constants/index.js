@@ -39,22 +39,21 @@ export const navLinks = [
 ];
 
 const services = [
-  // {
-  //   title: "React Native Developer",
-  //   icon: mobile,
-  // },
   {
-    title: "Front-end Developer",
+    title: "Design",
     icon: web,
+    description: "With a solid track record in designing websites and apps, I deliver strong and user-friendly digital designs. Solid company branding is the foundation of any succesful website."
   },
   {
-    title: "Backend Developer",
+    title: "Development",
     icon: backend,
+    description: "I build scalable websites from scratch that fit seamlessly with design. My focus is on micro animations, transitions and interaction. For content management I use Kirby CMS."
   },
   {
-    title: "Content Creator",
+    title: "The full package",
     icon: creator,
-  },
+    description: "A complete website from concept to implementation, that's what makes me stand out. My great sense for design and my development skills enable me to create kick-ass projects."
+  }
 ];
 
 const technologies = [
