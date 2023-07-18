@@ -6,11 +6,14 @@ const Home = () => {
         <>
             <div>
 
-                <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
+                <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center bg-fixed'>
                     <Hero />
                 </div>
                 <Experience />
+                <div className='hidden lg:flex'>
+
                 <Tech />
+                </div>
                 <Works />
                 <Feedbacks />
 
