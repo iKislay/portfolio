@@ -1,0 +1,122 @@
+.water-round-container {
+    margin: 0 auto;
+    overflow: hidden;
+    position: absolute;
+    top: -20vw;
+    width: 100vw;
+    height: 100vw;
+    text-align: center;
+    line-height: 50px;
+    animation: water-waves linear infinite;
+    transform: scaleY(-1);
+    background-attachment: fixed;
+  }
+.water-round-container2 {
+    margin: 0 auto;
+    opacity: 0.4;
+    /* overflow: hidden; */
+    position: absolute;
+    top: 40vw;
+    width: 100vw;
+    height: 100vw;
+    text-align: center;
+    line-height: 50px;
+    animation: water-waves linear infinite;
+    transform: scaleY(-1);
+    background-attachment: fixed;
+  }
+  .water-wave1 {
+    position: absolute;
+    top: 80%;
+    left: -25%;
+    background: #000000;
+    opacity: 0.7;
+    width: 200%;
+    height: 200%;
+    border-radius: 40%;
+    animation: inherit;
+    animation-duration: 5s;
+  }
+
+  .water-wave2 {
+    position: absolute;
+    top: 45%;
+    left: -47%;
+    background: #393939;;
+    opacity: 0.5;
+    width: 200%;
+    height: 200%;
+    border-radius: 35%;
+    animation: inherit;
+    animation-duration: 7s;
+  }
+
+  .water-wave3 {
+    position: absolute;
+    top: 50%;
+    left: -45%;
+    background: #000000;
+    opacity: 0.3;
+    width: 150%;
+    height: 200%;
+    border-radius: 33%;
+    animation: inherit;
+    animation-duration: 11s;
+  }
+  .water-wave4 {
+    position: absolute;
+    top: 60%;
+    left: -75%;
+    background: #434445;
+    opacity: 0.3;
+    width: 200%;
+    height: 200%;
+    border-radius: 33%;
+    animation: inherit;
+    animation-duration: 11s;
+  }
+  .water-wave5 {
+    position: absolute;
+    top: 75%;
+    left: -15%;
+    background: #b6b6b6;
+    opacity: 0.3;
+    width: 200%;
+    height: 200%;
+    border-radius: 33%;
+    animation: inherit;
+    animation-duration: 11s;
+  }
+  .water-wave6 {
+    position: absolute;
+    top: 80%;
+    left: -5%;
+    background: #0000008c;
+    opacity: 0.3;
+    width: 200%;
+    height: 200%;
+    border-radius: 33%;
+    animation: inherit;
+    animation-duration: 11s;
+  }
+  .water-wave7 {
+    position: absolute;
+    top: 90%;
+    left: -3%;
+    background: #0f7ae4;
+    opacity: 0.3;
+    width: 200%;
+    height: 200%;
+    border-radius: 33%;
+    animation: inherit;
+    animation-duration: 11s;
+  }
+
+  @keyframes water-waves {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
