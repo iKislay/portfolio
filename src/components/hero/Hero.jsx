@@ -1,8 +1,11 @@
-import { styles } from "../styles";
-import WaterRoundContainer from "./wave"
+import { styles } from "../../styles";
+import WaterRoundContainer from "../wave"
 
 const Hero = () => {
   return (
+    <>
+    <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
+    
     <section className="relative w-full h-screen mx-auto">
       <WaterRoundContainer />
       <div className={`absolute inset-0 top-[100px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-center gap-5`}>
@@ -18,6 +21,7 @@ const Hero = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
