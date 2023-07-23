@@ -3,7 +3,7 @@ import { Works } from '../components'
 
 const Work = () => {
   return (
-    <Work/>
+    <div>Work</div>
   )
 }
 
