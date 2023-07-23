@@ -25,12 +25,14 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import linkedin from "./company/linkedin.png";
 
 import carrent from "./snapytrend.png";
 import tripguide from "./flowrat.png";
 
 export {
   logo,
+  linkedin,
   backend,
   creator,
   mobile,

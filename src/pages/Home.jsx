@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <>
             <div>
-                <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden'>
+                <div className='bg-black bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden'>
                     <Hero />
                 </div>
                 <Experience />

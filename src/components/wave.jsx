@@ -7,7 +7,7 @@ const WaterRoundContainer = () => {
     initial: {
       y: '-100vh', // Move the container 100 viewport heights above the screen
       opacity: 0,
-      rotateX: 0, // Flip the container vertically
+      rotateX: 180, // Flip the container vertically
     },
     animate: {
       y: 0, // Move the container back to its original position

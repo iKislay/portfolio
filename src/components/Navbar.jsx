@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from 'gsap';
+import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
@@ -45,6 +46,25 @@ const Navbar = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2
+      }
+    }
+  };
+  
+  const item = {
+    hidden: { y: -50, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1
+    }
+  };
 
   return (
     <nav
@@ -61,15 +81,29 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <p className="text-white text-[18px] font-mono cursor-pointer flex ">
+          <motion.p 
+          className="text-white text-[18px] font-mono cursor-pointer flex "
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y:0, opacity: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 760,
+            damping: 100
+          }}
+          >
             Kislay &nbsp;
             <span className="sm:block hidden"> | Full Stack Dev</span>
-          </p>
+          </motion.p>
         </Link>
 
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+        <motion.ul
+        variants={container}
+        initial="hidden"
+        animate="visible"
+       className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((nav) => (
-            <li
+            <motion.li
+            variants={item}
               key={nav.id}
               className={`magnetic ${active === nav.title ? "text-white" : "text-secondary"
                 } hover:text-white text-[18px] font-medium cursor-pointer`}
@@ -78,9 +112,9 @@ const Navbar = () => {
               <Link onClick={() => {
             window.scrollTo(0, 0);
           }} to={`/${nav.id}`}>{nav.title}</Link>
-            </li>
+            </motion.li>
           ))}
-        </ul>
+        </motion.ul>
 
         <div className="sm:hidden flex items-center">
           <img
