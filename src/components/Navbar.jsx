@@ -11,6 +11,7 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
   useEffect(() => {
     const magnets = document.querySelectorAll('.magnetic');
     const strength = 50;
@@ -46,33 +47,42 @@ const Navbar = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   const container = {
-    hidden: { opacity: 1, scale: 0 },
+    hidden: { opacity: 0, y: -50 },
     visible: {
       opacity: 1,
-      scale: 1,
+      y: 0,
       transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2
+        type: "spring",
+        stiffness: 760,
+        damping: 100
       }
     }
   };
-  
+
   const item = {
-    hidden: { y: -50, opacity: 0 },
+    hidden: { opacity: 0 },
     visible: {
-      y: 0,
-      opacity: 1
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 760,
+        damping: 100
+      }
     }
   };
 
   return (
     <nav
-      className={`${styles.paddingX
-        } w-full flex items-center py-5 fixed top-0 z-20 ${scrolled ? "bg-primary" : "bg-transparent"
-        }`}
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${scrolled ? "bg-primary" : "bg-transparent"}`}
     >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate="visible"
+        className="w-full flex justify-between items-center max-w-7xl mx-auto"
+      >
         <Link
           to="/"
           className="flex items-center gap-2"
@@ -81,37 +91,31 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <motion.p 
-          className="text-white text-[18px] font-mono cursor-pointer flex "
-          initial={{ y: -100, opacity: 0 }}
-          animate={{ y:0, opacity: 1 }}
-          transition={{
-            type: "spring",
-            stiffness: 760,
-            damping: 100
-          }}
+          <motion.p
+            className="text-white text-[18px] font-mono cursor-pointer flex"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
           >
             Kislay &nbsp;
-            <span className="sm:block hidden"> | Full Stack Dev</span>
+            <span className="sm:block hidden">| <span className="text-[#915EFF] pl-1 font-light"> Full Stack Dev</span></span>
           </motion.p>
         </Link>
 
         <motion.ul
-        variants={container}
-        initial="hidden"
-        animate="visible"
-       className="list-none hidden sm:flex flex-row gap-10">
+          variants={container}
+          initial="hidden"
+          animate="visible"
+          className="list-none hidden sm:flex flex-row gap-10"
+        >
           {navLinks.map((nav) => (
             <motion.li
-            variants={item}
+              variants={item}
               key={nav.id}
               className={`magnetic ${active === nav.title ? "text-white" : "text-secondary"
                 } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
-              <Link onClick={() => {
-            window.scrollTo(0, 0);
-          }} to={`/${nav.id}`}>{nav.title}</Link>
+              <Link onClick={() => { window.scrollTo(0, 0); }} to={`/${nav.id}`}>{nav.title}</Link>
             </motion.li>
           ))}
         </motion.ul>
@@ -138,18 +142,15 @@ const Navbar = () => {
                     setToggle(!toggle);
                     setActive(nav.title);
                     window.scrollTo(0, 0);
-
                   }}
                 >
-                  <Link to={`${nav.id}`} onClick={() => {
-                    window.scrollTo(0, 0);
-                  }}>{nav.title}</Link>
+                  <Link to={`${nav.id}`} onClick={() => { window.scrollTo(0, 0); }}>{nav.title}</Link>
                 </li>
               ))}
             </ul>
           </div>
         </div>
-      </div>
+      </motion.div>
     </nav>
   );
 };

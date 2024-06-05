@@ -1,5 +1,4 @@
 import {
-  mobile,
   backend,
   creator,
   web,
@@ -15,12 +14,13 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  carrent,
-  tripguide,
+  snapytrend_ss,
+  flowrat_ss,
   threejs,
+  defaultCompanyLogo,
+  geeksforgeeks,
+  spotify_clone_ss,
+  ubuntu_portfolio_ss
 } from "../assets";
 
 export const navLinks = [
@@ -32,10 +32,10 @@ export const navLinks = [
     id: "about",
     title: "About",
   },
-  {
-    id: "work",
-    title: "Work",
-  },
+  // {
+  //   id: "schedule",
+  //   title: "Schedule a call",
+  // },
   {
     id: "contact",
     title: "Contact",
@@ -117,9 +117,22 @@ const technologies = [
 
 const experiences = [
   {
+    title: "Campus Mantri",
+    company_name: "GeeksForGeeks",
+    icon: geeksforgeeks,
+    iconBg: "#383E56",
+    date: "April 2024 - April 2025 · 12 mon",
+    points: [
+      "Planned and organized workshops, coding competitions, and seminars in my campus.",
+      "Promoted GeeksforGeeks resources, courses, and events through social media and campus channels.",
+      "Acted as the primary point of contact between GeeksforGeeks and the campus community.",
+      "Fostered a community of learners by encouraging collaboration and knowledge sharing among students.",
+    ],
+  },
+  {
     title: "Senior Web Developer (Part-Time)",
     company_name: "DeuxSTEM",
-    icon: starbucks,
+    icon: defaultCompanyLogo,
     iconBg: "#383E56",
     date: "Jun 2022 - Aug 2022 · 3 mon",
     points: [
@@ -130,22 +143,9 @@ const experiences = [
     ],
   },
   {
-    title: "Web Developer (Intern)",
-    company_name: "Info aidTech",
-    icon: tesla,
-    iconBg: "black",
-    date: "May 2023 - Jul 2023 · 3 mon",
-    points: [
-      "Completed task like coding product landing page, calculator, temprature converter.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
     title: "Full stack Developer (Full-time)",
     company_name: "Snapytrend",
-    icon: meta,
+    icon: defaultCompanyLogo,
     iconBg: "black",
     date: "March 2023 - Present",
     points: [
@@ -176,7 +176,7 @@ const testimonials = [
   },
   {
     testimonial:
-      "After Kislay optimized our website, our traffic increased by 50%. We can't thank them enough!",
+      "After Kislay optimized our website, our traffic increased by 50%. I can't thank him enough!",
     name: "Lisa Wang",
     designation: " ",
     company: " ",
@@ -186,72 +186,85 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Blog Website",
+    name: "Ubuntu Theme Portfolio",
     description:
-      "A responsive blog website built with express.js and ejs. It offers a user-friendly interface, intuitive navigation, and seamless integration with Node.js and MongoDB for a robust backend. Explore captivating articles, engage in discussions, and share your favorite content effortlessly.",
+      "A responsive portfolio website with ubuntu theme crafted with the power of Next.js to provide a seamless and engaging user experience. This project is a demonstration of my skills in web development, design, and theming, incorporating the sleek and modern aesthetic of the Ubuntu operating system.",
     tags: [
       {
-        name: "ejs",
+        name: "tailwindcss",
         color: "blue-text-gradient",
       },
       {
-        name: "express.js",
+        name: "Next.js",
         color: "green-text-gradient",
       },
+    ],
+    image: ubuntu_portfolio_ss,
+    source_code_link: "https://kislay-portfolio.vercel.app/",
+  },
+  {
+    name: "Spotify Web Player Clone",
+    description:
+      "A responsive spotify web player clone website developed using React.js to showcase design of the popular music streaming platform, Spotify. This clone shows my ability to build complex, interactive web applications with a focus on user experience and modern web technologies.",
+    tags: [
       {
-        name: "mongoDb",
+        name: "React.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://flowrat.com/",
+    image: spotify_clone_ss,
+    source_code_link: "https://spotify-kislay.vercel.app/",
   },
   // {
-  //   name: "ecommerce website",
+  //   name: "Blog Website",
   //   description:
-  //     "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+  //     "A responsive blog website built with express.js and ejs. It offers a user-friendly interface, intuitive navigation, and seamless integration with Node.js and MongoDB for a robust backend. Explore captivating articles, engage in discussions, and share your favorite content effortlessly.",
   //   tags: [
   //     {
-  //       name: "react",
+  //       name: "ejs",
   //       color: "blue-text-gradient",
   //     },
   //     {
-  //       name: "restapi",
+  //       name: "express.js",
   //       color: "green-text-gradient",
   //     },
   //     {
-  //       name: "scss",
+  //       name: "mongoDb",
   //       color: "pink-text-gradient",
   //     },
   //   ],
-  //   image: jobit,
-  //   source_code_link: "https://snapytrend.com/",
+  //   image: snapytrend_ss,
+  //   source_code_link: "https://flowrat.com/",
   // },
-  {
-    name: "ecommerce website",
-    description:
-      "'Snapytrend' - a visually stunning online store built using MERN stack, featuring a sleek and modern design that captivates customers. With seamless integration of payment gateways, admin panel which includes - inventory management, and order tracking, creating coupon code, etc.",
-    tags: [
-      {
-        name: "tailwind.css",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "react.js",
-        color: "green-text-gradient",
-      },
-      {
-        name: "node.js",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "mongoDb",
-        color: "red-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
-  },
+  // {
+  //   name: "ecommerce website",
+  //   description:
+  //     "'Snapytrend' - a visually stunning online store built using MERN stack, featuring a sleek and modern design that captivates customers. With seamless integration of payment gateways, admin panel which includes - inventory management, and order tracking, creating coupon code, etc.",
+  //   tags: [
+  //     {
+  //       name: "tailwind.css",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "react.js",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "node.js",
+  //       color: "pink-text-gradient",
+  //     },
+  //     {
+  //       name: "mongoDb",
+  //       color: "red-text-gradient",
+  //     },
+  //   ],
+  //   image: flowrat_ss,
+  //   source_code_link: "https://github.com/",
+  // },
 ];
 
 export { services, technologies, experiences, testimonials, projects };

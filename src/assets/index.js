@@ -21,16 +21,23 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
 import linkedin from "./company/linkedin.png";
+import geeksforgeeks from "./company/geeksforgeeks.png";
+import fromle from "./company/fromle.jpg";
+import defaultCompanyLogo from "./company/companyLogo.png";
 
-import carrent from "./snapytrend.png";
-import tripguide from "./flowrat.png";
+import snapytrend_ss from "./snapytrend.png";
+import flowrat_ss from "./flowrat.png";
+import ubuntu_portfolio_ss from "./ubuntu-theme-portfolio.png";
+import spotify_clone_ss from "./Spotify-web-player-clone.png";
+
 
 export {
+  spotify_clone_ss,
+  ubuntu_portfolio_ss,
+  geeksforgeeks,
+  fromle,
+  defaultCompanyLogo,
   logo,
   linkedin,
   backend,
@@ -53,10 +60,6 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
-  carrent,
-  tripguide,
+  snapytrend_ss,
+  flowrat_ss,
 };
